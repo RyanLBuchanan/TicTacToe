@@ -40,6 +40,7 @@ namespace TicTacToe
             // Returns 0 if still playing
             // Returns 1 if player 1 wins
             // Returns 2 if player 2 wins
+            return 0;
         }
     }
 }

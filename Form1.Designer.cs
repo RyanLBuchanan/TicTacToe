@@ -143,6 +143,7 @@ namespace TicTacToe
             this.newGame.TabIndex = 9;
             this.newGame.Text = "New Game";
             this.newGame.UseVisualStyleBackColor = true;
+            this.newGame.Click += new System.EventHandler(this.newGame_Click);
             // 
             // groupBox1
             // 
