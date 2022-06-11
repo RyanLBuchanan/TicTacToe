@@ -39,9 +39,9 @@ namespace TicTacToe
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.newGame = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.groupBox1.SuspendLayout();
+            this.PlayerBox = new System.Windows.Forms.GroupBox();
+            this.CurrentPlayer = new System.Windows.Forms.Label();
+            this.PlayerBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // button0
@@ -143,35 +143,35 @@ namespace TicTacToe
             this.newGame.TabIndex = 9;
             this.newGame.Text = "New Game";
             this.newGame.UseVisualStyleBackColor = true;
-            this.newGame.Click += new System.EventHandler(this.newGame_Click);
+            this.newGame.Click += new System.EventHandler(this.NewGame_Click);
             // 
-            // groupBox1
+            // PlayerBox
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(616, 108);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(361, 296);
-            this.groupBox1.TabIndex = 10;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Current Player";
+            this.PlayerBox.Controls.Add(this.CurrentPlayer);
+            this.PlayerBox.Font = new System.Drawing.Font("Comic Sans MS", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PlayerBox.Location = new System.Drawing.Point(616, 108);
+            this.PlayerBox.Name = "PlayerBox";
+            this.PlayerBox.Size = new System.Drawing.Size(361, 296);
+            this.PlayerBox.TabIndex = 10;
+            this.PlayerBox.TabStop = false;
+            this.PlayerBox.Text = "Current Player";
             // 
-            // label1
+            // CurrentPlayer
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 90);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 135);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "X";
+            this.CurrentPlayer.AutoSize = true;
+            this.CurrentPlayer.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CurrentPlayer.Location = new System.Drawing.Point(120, 90);
+            this.CurrentPlayer.Name = "CurrentPlayer";
+            this.CurrentPlayer.Size = new System.Drawing.Size(126, 135);
+            this.CurrentPlayer.TabIndex = 0;
+            this.CurrentPlayer.Text = "X";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1013, 755);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.PlayerBox);
             this.Controls.Add(this.newGame);
             this.Controls.Add(this.button8);
             this.Controls.Add(this.button7);
@@ -185,8 +185,8 @@ namespace TicTacToe
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.PlayerBox.ResumeLayout(false);
+            this.PlayerBox.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -203,8 +203,8 @@ namespace TicTacToe
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button newGame;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.GroupBox PlayerBox;
+        private System.Windows.Forms.Label CurrentPlayer;
     }
 }
 

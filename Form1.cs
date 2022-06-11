@@ -38,10 +38,12 @@ namespace TicTacToe
             {
                 button.Text = "";
                 button.Enabled = false;
+                var indexCopy = index;
                 button.Click += (o, e) =>
                   {
-                      MakeMove(o as Button, index++);
+                      MakeMove(o as Button, indexCopy++);
                   };
+                index++;
             }
         }
 
@@ -50,9 +52,35 @@ namespace TicTacToe
             b.Text = _tokens[_currentToken];
             _currentToken++;
             _currentToken %= 2;
+            CurrentPlayer.Text = _tokens[_currentToken];
 
             _engine.Place(index);
             b.Enabled = false;
+
+            var winner = _engine.IsVictory();
+            if (winner == -1)
+            {
+                Draw();
+            }
+            else if (winner > 0)
+            {
+                WinnerIs(winner - 1);
+            }
+        }
+
+        private void Draw()
+        {
+            newGame.Enabled = true;
+            Toggle(false);
+            MessageBox.Show("Bummer! It's a draw!");
+        }
+
+        private void WinnerIs(int id)
+        {
+            newGame.Enabled = true;
+            Toggle(false);
+            var winner = _tokens[id];
+            MessageBox.Show($"Smashing! {winner} wins!");
         }
 
         private void Toggle(bool enabled)
@@ -60,14 +88,20 @@ namespace TicTacToe
             foreach(var button in _grid)
             {
                 button.Enabled = enabled;
+                if (enabled)
+                {
+                    button.Text = ""; // Clear board from previous game
+                }
             }
         }
 
-        private void newGame_Click(object sender, EventArgs e)
+        private void NewGame_Click(object sender, EventArgs e)
         {
             _engine.NewGame();
             Toggle(true);
             newGame.Enabled = false;
+            _currentToken = 0;
+            CurrentPlayer.Text = _tokens[_currentToken];
         }
     }
 }
