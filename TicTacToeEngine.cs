@@ -14,10 +14,7 @@ namespace TicTacToe
         public void NewGame()
         {
             // Initialize board
-            for (int i = 0; i < 9; i++)
-            {
-                _grid[i] = 0;
-            }
+            for (int i = 0; i < 9; i++) _grid[i] = 0;
 
             // Set current player to 1
             _currentPlayer = 1;
