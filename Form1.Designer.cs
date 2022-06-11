@@ -29,7 +29,7 @@ namespace TicTacToe
         /// </summary>
         private void InitializeComponent()
         {
-            this.gridButton = new System.Windows.Forms.Button();
+            this.button0 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -44,15 +44,15 @@ namespace TicTacToe
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // gridButton
+            // button0
             // 
-            this.gridButton.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gridButton.Location = new System.Drawing.Point(12, 12);
-            this.gridButton.Name = "gridButton";
-            this.gridButton.Size = new System.Drawing.Size(180, 180);
-            this.gridButton.TabIndex = 0;
-            this.gridButton.Text = "X";
-            this.gridButton.UseVisualStyleBackColor = true;
+            this.button0.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button0.Location = new System.Drawing.Point(12, 12);
+            this.button0.Name = "button0";
+            this.button0.Size = new System.Drawing.Size(180, 180);
+            this.button0.TabIndex = 0;
+            this.button0.Text = "X";
+            this.button0.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -117,7 +117,7 @@ namespace TicTacToe
             // button7
             // 
             this.button7.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(384, 384);
+            this.button7.Location = new System.Drawing.Point(198, 384);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(180, 180);
             this.button7.TabIndex = 7;
@@ -127,7 +127,7 @@ namespace TicTacToe
             // button8
             // 
             this.button8.Font = new System.Drawing.Font("Comic Sans MS", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(198, 384);
+            this.button8.Location = new System.Drawing.Point(384, 384);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(180, 180);
             this.button8.TabIndex = 8;
@@ -180,7 +180,7 @@ namespace TicTacToe
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.gridButton);
+            this.Controls.Add(this.button0);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -192,7 +192,7 @@ namespace TicTacToe
 
         #endregion
 
-        private System.Windows.Forms.Button gridButton;
+        private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
