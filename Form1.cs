@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TicTacToe
@@ -68,19 +61,19 @@ namespace TicTacToe
             }
         }
 
-        private void Draw()
-        {
-            newGame.Enabled = true;
-            Toggle(false);
-            MessageBox.Show("Bummer! It's a draw!");
-        }
-
         private void WinnerIs(int id)
         {
             newGame.Enabled = true;
             Toggle(false);
             var winner = _tokens[id];
             MessageBox.Show($"Smashing! {winner} wins!");
+        }
+
+        private void Draw()
+        {
+            newGame.Enabled = true;
+            Toggle(false);
+            MessageBox.Show("Bummer! It's a draw!");
         }
 
         private void Toggle(bool enabled)
